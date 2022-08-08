@@ -1,9 +1,9 @@
 <?php 
-
+require "koneksi.php";
 $id = $_GET['id'];
 
-$database = new PDO("mysql:host=localhost;dbname=sekolah__php_pdo",'root','');
-$query = $database->query("DELETE FROM siswa where id='$id'");
+$database = new database();
+$query = $database->hapus('siswa', ['id' => $id]);
 
 if($query){
    header("Location:index.php");

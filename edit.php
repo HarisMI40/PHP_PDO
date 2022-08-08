@@ -22,8 +22,8 @@ $data = $query->fetch();
         <div>
             <label>Kelas</label>
             <select name="kelas" id="">
-                <option value="1" <?= $data['id_kelas'] == '1' ? 'selected' : '' ?>>12 RPL</option>
-                <option value="2" <?= $data['id_kelas'] == '2' ? 'selected' : '' ?>>11 RPL</option>
+                <option value="1" <?= $data['kelas'] == '1' ? 'selected' : '' ?>>12 RPL</option>
+                <option value="2" <?= $data['kelas'] == '2' ? 'selected' : '' ?>>11 RPL</option>
             </select>
         </div>
         <input type="submit" value="simpan">

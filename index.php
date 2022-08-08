@@ -1,8 +1,9 @@
 <?php
- $db = new PDO("mysql:host=localhost;dbname=sekolah__php_pdo",'root','');
- $query = $db->query('select * from siswa');
+    require 'koneksi.php';
+$db = new database();
 
- while ($data = $query->fetch() ) :?>
+$datas = $db->getData('siswa');
+ foreach($datas as $data) :?>
     <p>
         <a href="edit.php?id=<?= $data['id']; ?>">
             <?= $data['nama'] ?>
@@ -12,4 +13,4 @@
             Hapus
         </a>
     </p>
-<?php endwhile ?>
+<?php endforeach ?>
