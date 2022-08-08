@@ -1,6 +1,6 @@
 <?php
 $id = $_GET['id'];
-$db = new PDO("mysql:host=localhost;dbname=sekolah",'root','');
+$db =new PDO("mysql:host=localhost;dbname=sekolah__php_pdo",'root','');
 $query = $db->query("select * from siswa where id=$id");
 $data = $query->fetch();
 ?>
