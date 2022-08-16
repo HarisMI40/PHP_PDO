@@ -11,22 +11,23 @@ $data = $query->fetch();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <form action="proses_edit.php" method="post">
+    <form action="proses_edit.php" method="post" class="container">
         <input type="hidden" name="id" value="<?= $id ?>">
-        <div>
-            <label>Nama</label>
-            <input type="text" name="nama" value="<?= $data['nama'] ?>">
+        <div class="mb-3">
+            <label  class="form-label">Nama</label>
+            <input class="form-control" type="text" name="nama" value="<?= $data['nama'] ?>">
         </div>
-        <div>
-            <label>Kelas</label>
-            <select name="kelas" id="">
-                <option value="1" <?= $data['id_kelas'] == '1' ? 'selected' : '' ?>>12 RPL</option>
-                <option value="2" <?= $data['id_kelas'] == '2' ? 'selected' : '' ?>>11 RPL</option>
+        <div class="mb-3">
+            <label class="form-label">Kelas</label>
+            <select class="form-control" name="kelas" id="">
+                <option value="1" <?= $data['kelas'] == '1' ? 'selected' : '' ?>>12 RPL</option>
+                <option value="2" <?= $data['kelas'] == '2' ? 'selected' : '' ?>>11 RPL</option>
             </select>
         </div>
-        <input type="submit" value="simpan">
+        <input type="submit" class="btn btn-success" value="simpan">
     </form>
 </body>
 </html>
