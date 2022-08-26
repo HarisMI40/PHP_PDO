@@ -1,5 +1,7 @@
 <?php
- $db = new PDO("mysql:host=localhost;dbname=sekolah__php_pdo",'root','');
+include "koneksi.php";
+ $koneksi = new koneksi();
+ $db = $koneksi->getKoneksi();
  $query = $db->query('select * from siswa');
 
  while ($data = $query->fetch() ) :?>
