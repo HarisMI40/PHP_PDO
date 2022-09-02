@@ -4,4 +4,4 @@ session_start();
 
 session_destroy();
 
-echo "anda telah logout";
+header("Location:form.php");
