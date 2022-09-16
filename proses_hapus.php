@@ -1,4 +1,10 @@
 <?php 
+class koneksi_database{
+
+};
+
+$koneksi = new koneksi_database();
+
 require "koneksi.php";
 $id = $_GET['id'];
 
