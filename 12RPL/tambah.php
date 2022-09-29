@@ -9,6 +9,13 @@
 </head>
     <body>
         <div class="container mt-5">
+
+            <?php if(isset($_GET['error'])) : ?>
+                <div class="alert alert-danger" role="alert">
+                    <p><?= $_GET['error'] ?></p>
+                </div>
+            <?php endif ?>
+
             <div class="card">
                 <div class="card-body">
                     <form action="proses_tambah.php" method="post">

@@ -36,6 +36,7 @@
                     </li>
             <?php endwhile ?>
         </ul>
+        <a href="logout.php" class="btn btn-warning btn-sm mt-3" onclick="return confirm('Anda Yakin Akan Logout ?')">Logout</a>
     </div>
 </body>
 </html>
