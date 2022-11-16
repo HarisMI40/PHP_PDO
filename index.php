@@ -1,5 +1,5 @@
 <?php
- $db = new PDO("mysql:host=containers-us-west-120.railway.app:7333;dbname=railway",'UDqUH6Jl3yPws7j2mslw','');
+ $db = new PDO("mysql:host=containers-us-west-120.railway.app:7333;dbname=railway",'root','UDqUH6Jl3yPws7j2mslw');
  $query = $db->query('select * from siswa');
 
  while ($data = $query->fetch() ) :?>
